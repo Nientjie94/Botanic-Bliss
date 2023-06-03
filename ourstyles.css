@@ -14,7 +14,7 @@
     font-size: 16px;
 }
 .products-box{
-    padding: 70px 0px;
+    padding: 70px ;
 }
 .special-menu{
     margin-bottom: 40px;
@@ -44,16 +44,10 @@
     position: relative;
 }
 .box-img-hover img{
-    margin: 0 auto;
     text-align: center;
     display: block;
 }
-.type-lb{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index:8;
-}
+
 .type-lb .sale{
     background: #b0b435;
     color: #ffffff;
