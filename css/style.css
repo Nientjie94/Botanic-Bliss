@@ -41,7 +41,7 @@
 
 .hero-section {
     position: relative;
-    background-image: url("/pexels-maksim-goncharenok-4596808.jpg");
+    background-image: url('/pexels-maksim-goncharenok-4596808.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh; /* Adjust the height as needed */
@@ -79,9 +79,44 @@
     }
   }
 
-  span {
-    color: #b0b435
+   .hero-content span {
+    color: #b0b435;
+    position: relative;
+    
+    
+  } 
+
+  /* .hero-content span ::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #b0b435;
+    -webkit-text-stroke: 0vw #383838;
+    border-right: 2px solid #b0b435;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
   }
+
+  @keyframes animate 
+  {
+    0%
+    {
+        width: 0
+    }
+
+   70%,90%
+{
+    width: 100%;
+}
+
+}
+
+ */
+
+  
 
  a {
      color: #1f1f1f;
@@ -144,9 +179,147 @@
      transition: all .3s ease-in-out;
 }
 
- i {
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .about-image {
+    flex:0 0 30%
+    margin-right: 20px;
+    max-width: 1500px;
+    height: auto;
+;
+
+  }
+
+  .noo-sh-title-top span{
     color: #b0b435
-}
+  }
+  
+  /* .about-image img {
+    max-width: 1500px;
+    height: auto;
+  } */
+  
+  .about-description {
+    margin-left: 20px;
+    flex: 1;
+  }
+  
+  .about-description p {
+    position: relative;
+  }
+  
+  #dots {
+    display: inline;
+  }
+  
+  #more {
+    display: none;
+  }
+  
+  #read-more-btn {
+    background-color: #b0b435;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  #read-more-btn:hover {
+    background-color: #b0b435;
+  }
+  
+  .gallery-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .slider {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .slide {
+    flex: 0 0 33,33%; 
+  }
+  
+  .slide img {
+    width: 250px;
+    height: 400px;
+    border-radius: 0;
+  }
+  
+  .arrow-container {
+    text-align: center;
+  }
+  
+  .arrow {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .second-section{
+    padding-top: 60px;
+  }
+
+  .icon-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon-box {
+    text-align: center;
+  }
+  
+  .icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    
+  }
+  
+  .icon-box i {
+    font-size: 24px;
+    color: #b0b435;
+    margin-bottom: 10px;
+  }
+
+  .icon-box p {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: center;
+    
+  }
+  
+  .icon h3{
+    margin-bottom: 5px;
+    color: #303030;
+    font-weight: bold;
+  }
+  
 
 
  .btn-custom {
@@ -860,9 +1033,58 @@
 
 
 
+/* ---------------------------------------- Articles ------------------------------*/
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
 
+.article {
+  width: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #b0b435;
+  border-radius: 10px;
+}
 
+img {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+}
 
+h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 12px;
+  color: gray;
+}
+
+.read-more {
+    display: block;
+    text-align: center;
+    background-color: #b0b435;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .read-more:hover {
+    background-color: #b0b435;
+  }
+  
 
 /*------------------------------------------------------------------ Copyright -------------------------------------------------------------------*/
  .footer-copyright{
