@@ -7,7 +7,7 @@ let cartItems = { // object to store cart items
    spider: {
       quantity: 0
    },
-    peachLily: {
+    peaceLily: {
         quantity: 0
     },
     aloeVera: {
@@ -22,9 +22,9 @@ loadCartFromLS()  //loads saved quantity cart
 
 updateInputItems()  // updates and saves changes in quantities
 
-function addToCart (productName) {
-    console.log(productName, document.getElementById(productName), +'') // 'snake' | 'spider' | etc.. //
+updateCartCounter() // updates navbar cart badge
 
+function addToCart (productName) {
     if (+document.getElementById(productName).value >= 0) {  //ensures that you can't select negative values.  // use a plus to cast a string to a number
 
         if (productName === 'snake') {
@@ -32,25 +32,34 @@ function addToCart (productName) {
             console.log(inputValue)
             cartItems.snake.quantity = parseInt(inputValue)
         } else if (productName === 'spider') {
-
-        } else if (productName === 'peachLily') {
-
+            const inputValue = document.getElementById('spider').value || 0  //cart should not be less than 0
+            console.log(inputValue)
+            cartItems.snake.quantity = parseInt(inputValue)
+        } else if (productName === 'peaceLily') {
+            const inputValue = document.getElementById('peaceLily').value || 0  //cart should not be less than 0
+            console.log(inputValue)
+            cartItems.snake.quantity = parseInt(inputValue)
         } else if (productName === 'aloeVera') {
-
+            const inputValue = document.getElementById('aloeVera').value || 0  //cart should not be less than 0
+            console.log(inputValue)
+            cartItems.snake.quantity = parseInt(inputValue)
         } else if (productName === 'rubberPlant') {
-
+            const inputValue = document.getElementById('rubberPlant').value || 0  //cart should not be less than 0
+            console.log(inputValue)
+            cartItems.snake.quantity = parseInt(inputValue)
         }
     }
-    //update and safe after action
+    //update and save after action
     updateInputItems()
     saveCartToLS()
+    updateCartCounter()
     console.log(cartItems, localStorage.getItem('cartItems'))
 }
 
 function loadCartFromLS() {
     const localStorageCartItems = localStorage.getItem('cartItems');
     if(localStorageCartItems) {
-        cartItems = JSON.parse(localStorageCartItems)  //parse is opposite of parseInt
+        cartItems = {...cartItems, ...JSON.parse(localStorageCartItems)}  //parse is opposite of parseInt
     }
 }
 
@@ -58,10 +67,23 @@ function saveCartToLS() {
     localStorage.setItem('cartItems', JSON.stringify(cartItems))
 }
 
+function updateCartCounter() {
+    let total = 0
+    Object.keys(cartItems).forEach(
+        (key) => {
+            console.log(key)
+            total = total + cartItems[key].quantity
+        }
+    )
+    const badgeSpan = document.getElementById('cart-counter')
+    badgeSpan.innerText = total
+}
+
+
 function updateInputItems() {
     document.getElementById('snake').value = cartItems.snake.quantity
     document.getElementById('spider').value = cartItems.spider.quantity
-    document.getElementById('peachLily').value = cartItems.peachLily.quantity
+    document.getElementById('peaceLily').value = cartItems.peaceLily.quantity
     document.getElementById('aloeVera').value = cartItems.aloeVera.quantity
     document.getElementById('rubberPlant').value = cartItems.rubberPlant.quantity
 }

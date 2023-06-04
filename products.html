@@ -62,7 +62,7 @@
 
                     
                     <i class="fa fa-shopping-bag"></i>
-                        <span class="badge">xx</span>
+                        <span class="badge" id="cart-counter">xx</span>
                         <p>My Cart</p>
                 </a></li>
                 </ul>
@@ -70,7 +70,7 @@
             <!-- End Atribute Navigation -->
 
             </div>
-            
+        </nav>
     </header>
     <!-- End Main Top -->
 
@@ -96,137 +96,134 @@
     <div class="shop-box-inner ">
         <!-- 1 -->
         <div class="container">
-                                    <div class="list-view-box mt-3">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                                <div class="products-single fix">
-                                                    <div class="box-img-hover">
-                                                        <img src="product images/snake plant.jpg" class="product-image" height="300px" width="300px"  alt="Image">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                          
-                                            <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
-                                                <div class="why-text full-width">
-                                                    <h4>Snake Plant (Sansevieria):</h4>
-                                                    <h5> R 380 (Tax inc.) </h5>
-                                                    <p><strong>Purpose:</strong> Air purification, releasing oxygen at night.
-                                                    <br><strong>Benefits:</strong> Removes toxins, improves air quality.
-                                                    <br><strong>Growing Conditions:</strong> Thrives in low to bright indirect light. Can tolerate low humidity.
-                                                    <br><strong>Care:</strong> Water moderately every 2-3 weeks. Allow the soil to dry between waterings.</p>
-                                                        <input type="number"  id="snake" min="1" placeholder="Enter quantity">
-                                                        <a class="btn hvr-hover" onclick="addToCart('snake')">Add to Cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 2  -->
-                                    <div class="list-view-box" >
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                                <div class="products-single fix">
-                                                    <div class="box-img-hover">
-                                                        <img src="product images/spider plant.jpg" class="product-image" height="300px" width="300px" alt="Image">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
-                                                <div class="why-text full-width">
-                                                    <h4>Spider Plant (Chlorophytum comosum)</h4>
-                                                    <h5>R 260 (Tax inc.)</h5>
-                                                    <p><strong>Purpose:</strong> Air purification, improving indoor air quality.
-                                                        <br>    <strong>Benefits:</strong> Removes formaldehyde and other volatile organic compounds.
-                                                        <br>    <strong>Growing Conditions:</strong> Prefers bright, indirect light but can tolerate some shade.
-                                                        <br>    <strong>Care:</strong> Water thoroughly and allow the soil to dry slightly between waterings. Avoid overwatering.</p>
-                                                        <input type="number" id="spider" min="1" placeholder="Enter quantity">
-                                                        <a class="btn hvr-hover"  onclick="addToCart('spider')">Add to Cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 3  -->
-                                    <div class="list-view-box">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                                <div class="products-single fix">
-                                                    <div class="box-img-hover">
-                                                        <img src="product images/Peace Lily (Spathiphyllum).jpg" class="product-image" height="300px" width="300px"  alt="Image">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
-                                                <div class="why-text full-width">
-                                                    <h4>Peace Lily (Spathiphyllum)</h4>
-                                                    <h5>R 440 (Tax inc.)</h5>
-                                                    <p><strong>Purpose:</strong> Air purification, adding humidity.
-                                                        <br>   <strong>Benefits:</strong> Removes common indoor pollutants like benzene and formaldehyde.
-                                                        <br>    <strong>Growing Conditions:</strong> Thrives in medium to low indirect light. Prefers higher humidity.
-                                                        <br>  <strong>Care:</strong>  Water moderately, keeping the soil slightly moist. Avoid overwatering or letting the soil dry out completely.</p>
-                                                        <input type="number" id="peachLily" min="1" placeholder="Enter quantity">
-                                                        <a class="btn hvr-hover"   onclick="addToCart('peachLily')">Add to Cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 4  -->
-                                    <div class="list-view-box">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                                <div class="products-single fix">
-                                                    <div class="box-img-hover">
-                                                        <img src="product images/Aloe Vera (Aloe barbadensis).jpg" class="product-image" height="300px" width="300px"  alt="Image">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
-                                                <div class="why-text full-width">
-                                                    <h4>Aloe Vera (Aloe barbadensis)</h4>
-                                                    <h5>R 300 (Tax inc.)</h5>
-                                                    <p><strong>Purpose:</strong> Medicinal uses, skin care.
-                                                        <br>   <strong>Benefits: </strong>Aloe gel has soothing properties for sunburns and skin irritations.
-                                                        <br>   <strong>Growing Conditions:</strong> Requires bright, indirect light. Tolerates drought but prefers well-drained soil.
-                                                        <br>    <strong>Care:</strong> Water deeply but infrequently, allowing the soil to dry out between waterings.</p>
-                                                        <input type="number" id="aloeVera" min="1" placeholder="Enter quantity">
-                                                        <a class="btn hvr-hover"  onclick="addToCart('AloeVera')">Add to Cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 5  -->
-                                    <div class="list-view-box">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                                <div class="products-single fix">
-                                                    <div class="box-img-hover">
-                                                        <img src="product images/Rubber Plant (Ficus elastica).jpg" class="product-image" height="300px" width="300px" alt="Image">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
-                                                <div class="why-text full-width" >
-                                                    <h4>Rubber Plant (Ficus elastica)</h4>
-                                                    <h5> R 400 (Tax inc.)</h5>
-                                                    <p><strong>Purpose:</strong> Air purification, aesthetic appeal.
-                                                     <br><strong>Benefits:</strong> Removes formaldehyde from the air.
-                                                     <br><strong>Growing Conditions: </strong>Requires bright, indirect light. Avoid direct sunlight.
-                                                    <br><strong>Care: </strong>Water when the top inch of soil is dry. Reduce watering in winter.</p>
-                                                    <input type="number" id="rubberPlant" min="1" placeholder="Enter quantity">
-                                                    <a class="btn hvr-hover"  onclick="addToCart('RubberPlant')">Add to Cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>                      
-                                </div>
+            <div class="list-view-box mt-3">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <img src="product images/snake plant.jpg" class="product-image" height="300px" width="300px"  alt="Image">
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                            <h4>Snake Plant (Sansevieria):</h4>
+                            <h5> R 380 (Tax inc.) </h5>
+                            <p><strong>Purpose:</strong> Air purification, releasing oxygen at night.
+                            <br><strong>Benefits:</strong> Removes toxins, improves air quality.
+                            <br><strong>Growing Conditions:</strong> Thrives in low to bright indirect light. Can tolerate low humidity.
+                            <br><strong>Care:</strong> Water moderately every 2-3 weeks. Allow the soil to dry between waterings.</p>
+                                <input type="number"  id="snake" min="1" placeholder="Enter quantity">
+                                <a class="btn hvr-hover" onclick="addToCart('snake')">Add to Cart</a>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <!-- 2  -->
+            <div class="list-view-box" >
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <img src="product images/spider plant.jpg" class="product-image" height="300px" width="300px" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                            <h4>Spider Plant (Chlorophytum comosum)</h4>
+                            <h5>R 260 (Tax inc.)</h5>
+                            <p><strong>Purpose:</strong> Air purification, improving indoor air quality.
+                                <br>    <strong>Benefits:</strong> Removes formaldehyde and other volatile organic compounds.
+                                <br>    <strong>Growing Conditions:</strong> Prefers bright, indirect light but can tolerate some shade.
+                                <br>    <strong>Care:</strong> Water thoroughly and allow the soil to dry slightly between waterings. Avoid overwatering.</p>
+                                <input type="number" id="spider" min="1" placeholder="Enter quantity">
+                                <a class="btn hvr-hover"  onclick="addToCart('spider')">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3  -->
+            <div class="list-view-box">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <img src="product images/Peace Lily (Spathiphyllum).jpg" class="product-image" height="300px" width="300px"  alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                            <h4>Peace Lily (Spathiphyllum)</h4>
+                            <h5>R 440 (Tax inc.)</h5>
+                            <p><strong>Purpose:</strong> Air purification, adding humidity.
+                                <br>   <strong>Benefits:</strong> Removes common indoor pollutants like benzene and formaldehyde.
+                                <br>    <strong>Growing Conditions:</strong> Thrives in medium to low indirect light. Prefers higher humidity.
+                                <br>  <strong>Care:</strong>  Water moderately, keeping the soil slightly moist. Avoid overwatering or letting the soil dry out completely.</p>
+                                <input type="number" id="peaceLily" min="1" placeholder="Enter quantity">
+                                <a class="btn hvr-hover"   onclick="addToCart('peaceLily')">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4  -->
+            <div class="list-view-box">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <img src="product images/Aloe Vera (Aloe barbadensis).jpg" class="product-image" height="300px" width="300px"  alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                            <h4>Aloe Vera (Aloe barbadensis)</h4>
+                            <h5>R 300 (Tax inc.)</h5>
+                            <p><strong>Purpose:</strong> Medicinal uses, skin care.
+                                <br>   <strong>Benefits: </strong>Aloe gel has soothing properties for sunburns and skin irritations.
+                                <br>   <strong>Growing Conditions:</strong> Requires bright, indirect light. Tolerates drought but prefers well-drained soil.
+                                <br>    <strong>Care:</strong> Water deeply but infrequently, allowing the soil to dry out between waterings.</p>
+                                <input type="number" id="aloeVera" min="1" placeholder="Enter quantity">
+                                <a class="btn hvr-hover"  onclick="addToCart('AloeVera')">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5  -->
+            <div class="list-view-box">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <img src="product images/Rubber Plant (Ficus elastica).jpg" class="product-image" height="300px" width="300px" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width" >
+                            <h4>Rubber Plant (Ficus elastica)</h4>
+                            <h5> R 400 (Tax inc.)</h5>
+                            <p><strong>Purpose:</strong> Air purification, aesthetic appeal.
+                             <br><strong>Benefits:</strong> Removes formaldehyde from the air.
+                             <br><strong>Growing Conditions: </strong>Requires bright, indirect light. Avoid direct sunlight.
+                            <br><strong>Care: </strong>Water when the top inch of soil is dry. Reduce watering in winter.</p>
+                            <input type="number" id="rubberPlant" min="1" placeholder="Enter quantity">
+                            <a class="btn hvr-hover"  onclick="addToCart('RubberPlant')">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
    <!-- end product descriptions  -->
 
 
