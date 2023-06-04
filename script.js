@@ -1,20 +1,25 @@
 
 // const cartItems = []; // ['snake', 'spider']
 let cartItems = { // object to store cart items
-   snake: {
-      quantity: 0
-   },
-   spider: {
-      quantity: 0
-   },
+    snake: {
+        quantity: 0,
+        price:  380
+    },
+    spider: {
+        quantity: 0,
+        price:  260
+    },
     peaceLily: {
-        quantity: 0
+        quantity: 0,
+        price:  440
     },
     aloeVera: {
-        quantity: 0
+        quantity: 0,
+        price:  300
     },
     rubberPlant: {
-        quantity: 0
+        quantity: 0,
+        price:  400
     },
 }
 
