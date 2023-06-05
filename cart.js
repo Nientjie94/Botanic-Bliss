@@ -81,9 +81,9 @@ function updateCartCounter() {
 function updateInputItems() {
     document.getElementById('snake').value = cartItems.snake.quantity
     document.getElementById('spider').value = cartItems.spider.quantity
-    // document.getElementById('peaceLily').value = cartItems.peaceLily.quantity
-    // document.getElementById('aloeVera').value = cartItems.aloeVera.quantity
-    // document.getElementById('rubberPlant').value = cartItems.rubberPlant.quantity
+    document.getElementById('peaceLily').value = cartItems.peaceLily.quantity
+    document.getElementById('aloeVera').value = cartItems.aloeVera.quantity
+    document.getElementById('rubberPlant').value = cartItems.rubberPlant.quantity
 }
 
 // calculate total
