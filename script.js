@@ -39,19 +39,19 @@ function addToCart (productName) {
         } else if (productName === 'spider') {
             const inputValue = document.getElementById('spider').value || 0  //cart should not be less than 0
             console.log(inputValue)
-            cartItems.snake.quantity = parseInt(inputValue)
+            cartItems.spider.quantity = parseInt(inputValue)
         } else if (productName === 'peaceLily') {
             const inputValue = document.getElementById('peaceLily').value || 0  //cart should not be less than 0
             console.log(inputValue)
-            cartItems.snake.quantity = parseInt(inputValue)
+            cartItems.peaceLily.quantity = parseInt(inputValue)
         } else if (productName === 'aloeVera') {
             const inputValue = document.getElementById('aloeVera').value || 0  //cart should not be less than 0
             console.log(inputValue)
-            cartItems.snake.quantity = parseInt(inputValue)
+            cartItems.aloeVera.quantity = parseInt(inputValue)
         } else if (productName === 'rubberPlant') {
             const inputValue = document.getElementById('rubberPlant').value || 0  //cart should not be less than 0
             console.log(inputValue)
-            cartItems.snake.quantity = parseInt(inputValue)
+            cartItems.rubberPlant.quantity = parseInt(inputValue)
         }
     }
     //update and save after action
@@ -64,7 +64,7 @@ function addToCart (productName) {
 function loadCartFromLS() {
     const localStorageCartItems = localStorage.getItem('cartItems');
     if(localStorageCartItems) {
-        cartItems = {...cartItems, ...JSON.parse(localStorageCartItems)}  //parse is opposite of parseInt
+        cartItems = {...cartItems, ...JSON.parse(localStorageCartItems)}
     }
 }
 

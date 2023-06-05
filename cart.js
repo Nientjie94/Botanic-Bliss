@@ -37,7 +37,10 @@ updateCartCounter()
 
 hideEmptyItems()
 
+
 updateInputItems()
+
+qTotal()
 
 calculateTotal()
 
@@ -45,14 +48,18 @@ calculateTotal()
 function loadCartFromLS() {
     const localStorageCartItems = localStorage.getItem('cartItems');
     if(localStorageCartItems) {
-        cartItems = {...cartItems, ...JSON.parse(localStorageCartItems)}  //parse is opposite of parseInt
+        cartItems = {...cartItems, ...JSON.parse(localStorageCartItems)}  //parse is opposite of stringify
     }
+}
+
+function saveCartToLS() {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
 }
 
 function hideEmptyItems() {
     Object.keys(cartItems).forEach(
         (key) => {
-            const cartItem = document.getElementById(key)
+            const cartItem = document.getElementById(key + '-row')
             if (cartItem) {
                 if (cartItems[key].quantity === 0) {
                     cartItem.setAttribute('style', 'display: none')
@@ -79,12 +86,39 @@ function updateCartCounter() {
 }
 
 function updateInputItems() {
-    document.getElementById('snake').value = cartItems.snake.quantity
-    document.getElementById('spider').value = cartItems.spider.quantity
-    document.getElementById('peaceLily').value = cartItems.peaceLily.quantity
-    document.getElementById('aloeVera').value = cartItems.aloeVera.quantity
-    document.getElementById('rubberPlant').value = cartItems.rubberPlant.quantity
+    document.getElementById('snake-input').value = cartItems.snake.quantity
+    document.getElementById('spider-input').value = cartItems.spider.quantity
+    document.getElementById('peaceLily-input').value = cartItems.peaceLily.quantity
+    document.getElementById('aloeVera-input').value = cartItems.aloeVera.quantity
+    document.getElementById('rubberPlant-input').value = cartItems.rubberPlant.quantity
 }
+
+// Calculate the grandTotal for each object based on price and quantity
+function qTotal()  {
+    let objectTotal = 0
+    Object.keys(cartItems).forEach(
+        (key) => {
+            console.log(key)
+
+            if(cartItems['snake-input']) {
+                objectTotal = objectTotal + (cartItems['snake'].quantity * cartItems['snake'].price)
+            }
+
+            const ele = document.getElementById('snake')
+            ele.innerText = 'R ' + objectTotal
+
+            console.log(objectTotal)
+        }
+    )
+}
+
+function handleInputOnChange(id) {
+    console.log(id);
+    cartItems[id].quantity = document.getElementById(id + '-input').value
+    saveCartToLS()
+    qTotal()
+}
+
 
 // calculate total
 function calculateTotal() {
@@ -103,6 +137,8 @@ function calculateTotal() {
 
         console.log(grandTotal)
         }
+
     )
 }
+
 

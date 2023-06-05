@@ -154,7 +154,6 @@
                                     <th>Price (Tax inc.)</th>
                                     <th>Quantity</th>
                                     <th>Total</th>
-                                    <th>Update Item Quantity</th>
                                     <th>Remove</th>
                                 </tr>
                             </thead>
@@ -162,40 +161,36 @@
 
                             <tbody>
 <!--                           SnakePlant-->
-                                <tr id="snake">
+                                <tr id="snake-row">
                                     <td class="thumbnail-img">
                                         <a href="products.html">
-									<img class="product-image" src="/product%20images/snake%20plant.jpg" width="120px" height="120px" alt="" />
-								</a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="products.html">
-                                            Snake Plant (Sansevieria) Bundle
-								</a>
+                                        <img class="product-image" src="/product%20images/snake%20plant.jpg" width="120px" height="120px" alt="" />
+                                        </a>
+                                            </td>
+                                            <td class="name-pr">
+                                                <a href="products.html">
+                                                    Snake Plant (Sansevieria) Bundle
+                                        </a>
                                     </td>
                                     <td class="price-pr">
                                         <p>R 380</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text" >
+                                        <input onchange="handleInputOnChange('snake')" id="snake-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text" >
                                     </td>
-                                    <td class="total-pr">
-                                        <p>$ 80.0</p>
+                                    <td class="total-pr" id="snake-pr">
+                                        <p >R </p>
                                     </td>
-                                    <td class="update-cart">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
-                                            Update
-                                        </button>
-                                    </td>
+
                                     <td class="remove-pr">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
+                                        <button type="button" id="clearItemButton" class="btn btn-danger" aria-label="Remove Product">
                                             Remove</button>
                                     </td>
 
                                 </tr>
 
 <!--                                SpiderPlant-->
-                                <tr id="spider">
+                                <tr id="spider-row">
                                     <td class="thumbnail-img">
                                         <a href="products.html">
                                             <img class="product-image" src="product%20images/spider%20plant.jpg" width="120px" height="120px" alt="" />
@@ -209,14 +204,10 @@
                                     <td class="price-pr">
                                         <p>R 260</p>
                                     </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$ 80.0</p>
-                                    </td>
-                                    <td class="update-cart">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
-                                            Update
-                                        </button>
+                                    <td class="quantity-box">
+                                        <input onchange="qTotal()" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                    <td class="total-pr" id="spider-pr">
+                                        <p>R </p>
                                     </td>
                                     <td class="remove-pr">
                                         <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
@@ -226,7 +217,7 @@
                                 </tr>
 
 <!--                                Peace Lily-->
-                                <tr id="peaceLily">
+                                <tr id="peaceLily-row">
                                     <td class="thumbnail-img">
                                         <a href="#">
 									<img class="product-image" src="/product%20images/Peace%20Lily%20(Spathiphyllum).jpg" alt="" />
@@ -240,14 +231,10 @@
                                     <td class="price-pr">
                                         <p>R 440</p>
                                     </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$ 80.0</p>
-                                    </td>
-                                    <td class="update-cart">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
-                                            Update
-                                        </button>
+                                    <td class="quantity-box">
+                                        <input onchange="qTotal()" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                    <td class="total-pr" id="peaceLily-pr">
+                                        <p>R </p>
                                     </td>
                                     <td class="remove-pr">
                                         <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
@@ -257,7 +244,7 @@
                                 </tr>
 
                                     <!--Aloe Vera-->
-                                <tr class="aloeVera">
+                                <tr class="aloeVera-row">
                                     <td class="thumbnail-img">
                                         <a href="#">
                                             <img class="product-image" src="product%20images/Aloe%20Vera%20(Aloe%20barbadensis).jpg" width="120px" height="120px" alt="" />
@@ -271,14 +258,10 @@
                                     <td class="price-pr">
                                         <p>R 300</p>
                                     </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$ 80.0</p>
-                                    </td>
-                                    <td class="update-cart">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
-                                            Update
-                                        </button>
+                                    <td class="quantity-box">
+                                        <input onchange="qTotal()" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                    <td class="total-pr" id="aloeVera-pr">
+                                        <p>R </p>
                                     </td>
                                     <td class="remove-pr">
                                         <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
@@ -288,7 +271,7 @@
                                 </tr>
 
 <!--                                RubberPlant-->
-                                <tr class="rubberPlant">
+                                <tr class="rubberPlant-row">
                                     <td class="thumbnail-img">
                                         <a href="#">
                                             <img class="product-image" src="product%20images/Rubber%20Plant%20(Ficus%20elastica).jpg" width="120px" height="120px" alt="" />
@@ -302,14 +285,10 @@
                                     <td class="price-pr">
                                         <p>R 400</p>
                                     </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                    <td class="total-pr">
-                                        <p>$ 80.0</p>
-                                    </td>
-                                    <td class="update-cart">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
-                                            Update
-                                        </button>
+                                    <td class="quantity-box">
+                                        <input onchange="qTotal()" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                    <td class="total-pr" id="rubberPlant-pr">
+                                        <p>R </p>
                                     </td>
                                     <td class="remove-pr">
                                         <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
