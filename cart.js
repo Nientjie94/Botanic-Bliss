@@ -37,7 +37,6 @@ updateCartCounter()
 
 hideEmptyItems()
 
-
 updateInputItems()
 
 qTotal()
@@ -78,7 +77,7 @@ function updateCartCounter() {
     Object.keys(cartItems).forEach(
         (key) => {
             console.log(key)
-            total = total + cartItems[key].quantity
+            total = total + +cartItems[key].quantity
         }
     )
     const badgeSpan = document.getElementById('cart-counter')
@@ -95,19 +94,15 @@ function updateInputItems() {
 
 // Calculate the grandTotal for each object based on price and quantity
 function qTotal()  {
-    let objectTotal = 0
     Object.keys(cartItems).forEach(
         (key) => {
             console.log(key)
 
-            if(cartItems['snake-input']) {
-                objectTotal = objectTotal + (cartItems['snake'].quantity * cartItems['snake'].price)
+            if(cartItems[key]) {
+               const itemTotal =  (cartItems[key].quantity * cartItems[key].price)
+                const ele = document.getElementById(key + '-pr')
+                ele.innerText = 'R ' + itemTotal
             }
-
-            const ele = document.getElementById('snake')
-            ele.innerText = 'R ' + objectTotal
-
-            console.log(objectTotal)
         }
     )
 }
@@ -116,7 +111,9 @@ function handleInputOnChange(id) {
     console.log(id);
     cartItems[id].quantity = document.getElementById(id + '-input').value
     saveCartToLS()
+    calculateTotal()
     qTotal()
+    updateCartCounter()
 }
 
 

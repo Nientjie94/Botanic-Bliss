@@ -117,7 +117,6 @@
         <div class="container">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
                 <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
             </div>
         </div>
@@ -153,7 +152,7 @@
                                     <th>Product Name</th>
                                     <th>Price (Tax inc.)</th>
                                     <th>Quantity</th>
-                                    <th>Total</th>
+                                    <th>Total </th>
                                     <th>Remove</th>
                                 </tr>
                             </thead>
@@ -205,7 +204,7 @@
                                         <p>R 260</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input onchange="qTotal()" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                        <input onchange="handleInputOnChange('spider')" id="spider-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr" id="spider-pr">
                                         <p>R </p>
                                     </td>
@@ -232,7 +231,7 @@
                                         <p>R 440</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input onchange="qTotal()" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                        <input onchange="handleInputOnChange('peaceLily')" id="peaceLily-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr" id="peaceLily-pr">
                                         <p>R </p>
                                     </td>
@@ -259,7 +258,7 @@
                                         <p>R 300</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input onchange="qTotal()" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                        <input onchange="handleInputOnChange('aloeVera')" id="aloeVera-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr" id="aloeVera-pr">
                                         <p>R </p>
                                     </td>
@@ -286,7 +285,7 @@
                                         <p>R 400</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input onchange="qTotal()" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                        <input onchange="handleInputOnChange('rubberPlant')" id="rubberPlant-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr" id="rubberPlant-pr">
                                         <p>R </p>
                                     </td>
