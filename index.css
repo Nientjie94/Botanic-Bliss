@@ -1,7 +1,11 @@
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-
+body {
+    /*background-image: url("/product images/p");*/
+    background-size: cover;
+    backdrop-filter: grayscale(50%);
+}
 #header-video {
     position: fixed;
     top: 0;
@@ -187,14 +191,15 @@
 
 .side-menu p {
     margin: 0;
+    font-size: 16;
 }
 
 .side-menu .badge {
-    background-color: red;
+    background-color: #1b5120;
     color: white;
     padding: 2px 5px;
     border-radius: 50%;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /* Add glowing effect on hover */
@@ -251,15 +256,30 @@
 
 .icon-box:hover {
     background-color: #6c757d; /* Set light gray background color on hover */
-    color: #000; /* Set text color to black on hover */
+    color: #0b2e13; /* Set text color to black on hover */
 }
 
+/* Add glowing effect on hover for the call-to-action button */
+.call-to-action-button:hover {
+    animation: glowing 1s infinite;
 }
+
+/* Change text color for the call-to-action button */
+.call-to-action-button {
+    color: white;
+}
+
+/* Change text color when clicked for the call-to-action button */
+.call-to-action-button:active {
+    text-shadow: 0 0 5px darkgreen;
+}
+
 
 p {
-    color: #9f9f9f;
+    color: black;
+    font-size: 16px:
 }
-{}
+
 
 /*Call to action button*/
 .cta-button {

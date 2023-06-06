@@ -63,8 +63,7 @@
     text-transform: uppercase;
 }
 .why-text{
-    background: #f5f5f5;
-    padding-top: 15px;
+    background: #12350fba;
     padding: 15px;
     height: 350px;
     width: 750px;
@@ -78,13 +77,20 @@
     font-family: 'Poppins', sans-serif;
     padding: 4px;
     display: inline-block;
-    background: #b0b4356e;
-    color: #ffffff;
+    background: #ffffffb3;
+    color: #ffffffb3;
     font-weight: 600;
+}
+
+.why-p{
+    font-size: 16px;
+    padding-top: 15px;
+    color: black;
 }
 
 .product-image {
     width: 350px;
     height: 350px;
-    padding-right:;
+    padding-right: 0;
 }
+

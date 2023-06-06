@@ -132,6 +132,7 @@
      font-size: 16px 
 }
  h5 {
+     color: #12350fba
      font-size: 14px 
 }
  h6 {
@@ -537,7 +538,7 @@
 /* Navbar Adjusment =========================== */
 /* Navbar Atribute ------*/
  .attr-nav > ul > li > a{
-     padding: 28px 15px;
+     padding: 10px 15px;
 }
  ul.cart-list > li.total > .btn{
      border-bottom: solid 1px #cfcfcf !important;
@@ -850,12 +851,12 @@
 }
  .hvr-hover{
      display: inline-block;
+     animation: glowing 4s infinite;
      vertical-align: middle;
      -webkit-transform: perspective(1px) translateZ(0);
      transform: perspective(1px) translateZ(0);
-     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
      position: relative;
-     background: #b0b435;
+     background: #0b2e13;
      -webkit-transition-property: color;
      transition-property: color;
      -webkit-transition-duration: 0.3s;
@@ -863,6 +864,11 @@
      border-radius: 0;
      box-shadow: none;
 }
+
+ .button {
+     background: #0b2e13;
+     color: #f2f2f2;
+ }
  .hvr-hover::after {
     content: "";
 	position: absolute;
@@ -871,7 +877,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #000000;
+	background: #1b1e21;
 	border-radius: 100%;
 	-webkit-transform: scale(0);
 	transform: scale(0);
@@ -885,7 +891,7 @@
  .hvr-hover:hover::after{
      -webkit-transform: scale(2);
 	 transform: scale(2);
-     color: #ffffff;
+     color: #f2f2f2;
 }
  .hvr-hover{
 	 overflow: hidden;
@@ -1098,15 +1104,10 @@ p {
 }
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
  .all-title-box{
-     background-image: url(/images/product\ images/pexels-skylar-kang-6044747) no-repeat center center;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -ms-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
+background-image: url("/product images/pexels-skylar-kang-6044747.jpg");
+
      text-align: center;
-     background-attachment: fixed;
-     padding: 70px 0px;
+     padding: 170px;
      position: relative;
 }
  .all-title-box::before{
@@ -1411,7 +1412,7 @@ p {
      padding: 70px 0px;
 }
  .table-main table thead{
-     background: #b0b435;
+     background: #12350fba;
      color: #ffffff;
 }
  .table-main .table thead th{
@@ -1422,15 +1423,16 @@ p {
 }
  .table-main table td{
      vertical-align: middle;
+     border-top: 10px solid #115a4238;
      font-size: 16px;
 }
  .quantity-box input{
-     width: 60px;
-     border: 2px solid #000000;
+     width: 50px;
+     border: 5px solid #6c757d;
      text-align: center;
 }
  .quantity-box input:focus{
-     border-color: #b0b435;
+     border-color: #1b5120;
 }
  .name-pr a{
      font-weight: 700;

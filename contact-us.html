@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="index.css">
 
 
 
@@ -60,32 +61,18 @@
                     Contact Us
                 </a>
             </li>
-            <li class="side-menu">
-                <a href="cart.html" class="nav-link text-white" >
-                    <i class="fa fa-shopping-bag"></i>
-                    <span class="badge" id="cart-counter"></span>
-                    <p>My Cart</p>
-                </a>
-            </li>
-
         </ul> <!-- End Atribute Navigation -->
         </nav>
-        </div>
-        </div>
 </header>
 
-            </div>
-        </nav>
-        <!-- End Navigation -->
-    </header>
-    <!-- End Main Top -->
 
-    <!-- Start Top Search -->
-    <div class="top-search">
+<div class="top-search">
         <div class="container">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
+                <label>
+                    <input type="text" class="form-control" placeholder="Search">
+                </label>
                 <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
             </div>
         </div>
@@ -116,25 +103,25 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <label for="name"></label><input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                                        <label for="email"></label><input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" name="name" placeholder="Subject" required data-error="Please enter your Subject">
+                                        <label for="subject"></label><input type="text" class="form-control" id="subject" name="name" placeholder="Subject" required data-error="Please enter your Subject">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" id="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
+                                        <label for="message"></label><textarea class="form-control" id="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="submit-button text-center">

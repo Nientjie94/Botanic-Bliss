@@ -29,6 +29,8 @@ updateInputItems()  // updates and saves changes in quantities
 
 updateCartCounter() // updates navbar cart badge
 
+
+
 function addToCart (productName) {
     if (+document.getElementById(productName).value >= 0) {  //ensures that you can't select negative values.  // use a plus to cast a string to a number
 
@@ -54,12 +56,16 @@ function addToCart (productName) {
             cartItems.rubberPlant.quantity = parseInt(inputValue)
         }
     }
+
+
     //update and save after action
     updateInputItems()
     saveCartToLS()
     updateCartCounter()
     console.log(cartItems, localStorage.getItem('cartItems'))
 }
+
+
 
 function loadCartFromLS() {
     const localStorageCartItems = localStorage.getItem('cartItems');
@@ -77,7 +83,7 @@ function updateCartCounter() {
     Object.keys(cartItems).forEach(
         (key) => {
             console.log(key)
-            total = total + cartItems[key].quantity
+            total = total + +cartItems[key].quantity
         }
     )
     const badgeSpan = document.getElementById('cart-counter')

@@ -24,6 +24,7 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="ourstyles.css">
+    <link rel="stylesheet" href="index.css">
 
 </head>
 
@@ -58,17 +59,27 @@
                     Contact Us
                 </a>
             </li>
-            <!-- Start Attribute Navigation -->
-            <li class="side-menu">
-                <a href="cart.html" class="nav-link text-white" >
-                    <i class="fa fa-shopping-bag"></i>
-                    <span class="badge" id="cart-counter"></span>
-                    <p>My Cart</p>
-                </a>
-            </li>
+            <!-- /.navbar-collapse -->
+
+            <!-- Start Atribute Navigation -->
+            <div class="attr-nav">
+                <ul>
+                    <!--                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>-->
+                    <!--                        <li class="side-menu"><a href="cart.html">-->
+
+                    <li class="side-menu">
+                        <a href="cart.html" class="nav-link text-white" >
+                            <i class="fa fa-shopping-bag"></i>
+                            <span class="badge" id="cart-counter"></span>
+                            <p>My Cart</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <!-- End Atribute Navigation -->
         </ul>
-        </nav>
+    </nav>
+    <!-- End Navigation -->
 </header>
 
 
@@ -106,7 +117,7 @@
                         <div class="why-text full-width">
                             <h4>Snake Plant (Sansevieria) Bundle:</h4>
                             <h5> R 380 (Tax inc.) </h5>
-                            <p><strong>Purpose:</strong> Air purification, releasing oxygen at night.
+                            <p class="why-p"><strong>Purpose:</strong> Air purification, releasing oxygen at night.
                             <br><strong>Benefits:</strong> Removes toxins, improves air quality.
                             <br><strong>Growing Conditions:</strong> Thrives in low to bright indirect light. Can tolerate low humidity.
                             <br><strong>Care:</strong> Water moderately every 2-3 weeks. Allow the soil to dry between waterings.</p>
@@ -131,7 +142,7 @@
                         <div class="why-text full-width">
                             <h4>Spider Plant (Chlorophytum comosum) Bundle:</h4>
                             <h5>R 260 (Tax inc.)</h5>
-                            <p><strong>Purpose:</strong> Air purification, improving indoor air quality.
+                            <p class="why-p"><strong>Purpose:</strong> Air purification, improving indoor air quality.
                                 <br>    <strong>Benefits:</strong> Removes formaldehyde and other volatile organic compounds.
                                 <br>    <strong>Growing Conditions:</strong> Prefers bright, indirect light but can tolerate some shade.
                                 <br>    <strong>Care:</strong> Water thoroughly and allow the soil to dry slightly between waterings. Avoid overwatering.</p>
@@ -156,7 +167,7 @@
                         <div class="why-text full-width">
                             <h4>Peace Lily (Spathiphyllum) Large:</h4>
                             <h5>R 440 (Tax inc.)</h5>
-                            <p><strong>Purpose:</strong> Air purification, adding humidity.
+                            <p class="why-p"><strong>Purpose:</strong> Air purification, adding humidity.
                                 <br>   <strong>Benefits:</strong> Removes common indoor pollutants like benzene and formaldehyde.
                                 <br>    <strong>Growing Conditions:</strong> Thrives in medium to low indirect light. Prefers higher humidity.
                                 <br>  <strong>Care:</strong>  Water moderately, keeping the soil slightly moist. Avoid overwatering or letting the soil dry out completely.</p>
@@ -181,7 +192,7 @@
                         <div class="why-text full-width">
                             <h4>Aloe Vera (Aloe barbadensis) Large:</h4>
                             <h5>R 300 (Tax inc.)</h5>
-                            <p><strong>Purpose:</strong> Medicinal uses, skin care.
+                            <p class="why-p"><strong>Purpose:</strong> Medicinal uses, skin care.
                                 <br>   <strong>Benefits: </strong>Aloe gel has soothing properties for sunburns and skin irritations.
                                 <br>   <strong>Growing Conditions:</strong> Requires bright, indirect light. Tolerates drought but prefers well-drained soil.
                                 <br>    <strong>Care:</strong> Water deeply but infrequently, allowing the soil to dry out between waterings.</p>
@@ -207,12 +218,12 @@
                         <div class="why-text full-width" >
                             <h4>Rubber Plant (Ficus elastica) bundle:</h4>
                             <h5> R 400 (Tax inc.)</h5>
-                            <p><strong>Purpose:</strong> Air purification, aesthetic appeal.
+                            <p class="why-p"><strong>Purpose:</strong> Air purification, aesthetic appeal.
                              <br><strong>Benefits:</strong> Removes formaldehyde from the air.
                              <br><strong>Growing Conditions: </strong>Requires bright, indirect light. Avoid direct sunlight.
                             <br><strong>Care: </strong>Water when the top inch of soil is dry. Reduce watering in winter.</p>
                             <label for="rubberPlant"></label><input type="number" id="rubberPlant" min="1" placeholder="Enter quantity">
-                            <a class="btn hvr-hover"  onclick="addToCart('RubberPlant')">Add to Cart</a>
+                            <a class="btn hvr-hover" id="button" onclick="addToCart('RubberPlant')">Add to Cart</a>
                         </div>
                     </div>
                 </div>
@@ -227,7 +238,7 @@
     <!-- Start Footer  -->
     <!-- Start copyright  -->
     <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2023 <a href="#">XXX</a> <br>Design By : Shasha & Janine
+        <p class="footer-company">All Rights Reserved.  <br>Design By :<br> Janine & Chacha
     </div>
     <!-- End copyright  -->
 

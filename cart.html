@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="ourstyles.css">
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="index.css">
 
 
 </head>
@@ -36,43 +37,48 @@
         <!-- Start Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
             <div class="container">
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
-                    <!-- <a class="navbar-brand" href="index.html"><img src="/Botanic-Bliss-master/1684728297169.png" class="logo" alt=""></a> -->
-                </div>
-                <!-- End Header Navigation -->
+            </div>
+            <!-- End Header Navigation -->
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </div>
+
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                <li>
+                    <a href="index.html" class="nav-link text-secondary">
+                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"></svg>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="products.html" class="nav-link text-white">
+                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"></svg>
+                        Our Products
+                    </a>
+                </li>
+                <li>
+                    <a href="contact-us.html" class="nav-link text-white">
+                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"></svg>
+                        Contact Us
+                    </a>
+                </li>
                 <!-- /.navbar-collapse -->
 
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu"><a href="cart.html">
+<!--                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>-->
+<!--                        <li class="side-menu"><a href="cart.html">-->
 
-
+                        <li class="side-menu">
+                            <a href="cart.html" class="nav-link text-white" >
 						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge" id="cart-counter">Shop</span>
+                            <span class="badge" id="cart-counter"></span>
 							<p>My Cart</p>
-					</a></li>
+					        </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
-            </div>
-
-
-
+            </ul>
         </nav>
         <!-- End Navigation -->
     </header>
@@ -137,14 +143,14 @@
                                         <p>R 380</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input onchange="handleInputOnChange('snake')" id="snake-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text" >
+                                        <label for="snake-input"></label><input onchange="handleInputOnChange('snake')" id="snake-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text" >
                                     </td>
                                     <td class="total-pr" id="snake-pr">
                                         <p >R </p>
                                     </td>
 
                                     <td class="remove-pr">
-                                        <button type="button" id="clearItemButton" class="btn btn-danger" aria-label="Remove Product">
+                                        <button type="button"  onclick="removeCartItem('snake')" id= "resetButton"  class="button" aria-label="Remove Product">
                                             Remove</button>
                                     </td>
 
@@ -166,12 +172,12 @@
                                         <p>R 260</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input onchange="handleInputOnChange('spider')" id="spider-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                        <label for="spider-input"></label><input onchange="handleInputOnChange('spider')" id="spider-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr" id="spider-pr">
                                         <p>R </p>
                                     </td>
                                     <td class="remove-pr">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
+                                        <button type="button" onclick="removeCartItem('spider')" class="button" aria-label="Remove Product 3">
                                             Remove
                                         </button>
                                     </td>
@@ -193,12 +199,12 @@
                                         <p>R 440</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input onchange="handleInputOnChange('peaceLily')" id="peaceLily-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                        <label for="peaceLily-input"></label><input onchange="handleInputOnChange('peaceLily')" id="peaceLily-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr" id="peaceLily-pr">
                                         <p>R </p>
                                     </td>
                                     <td class="remove-pr">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
+                                        <button type="button" onclick="removeCartItem('peaceLily')" class="button" aria-label="Remove Product 3">
                                             Remove
                                         </button>
                                     </td>
@@ -220,12 +226,12 @@
                                         <p>R 300</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input onchange="handleInputOnChange('aloeVera')" id="aloeVera-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                        <label for="aloeVera-input"></label><input onchange="handleInputOnChange('aloeVera')" id="aloeVera-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr" id="aloeVera-pr">
                                         <p>R </p>
                                     </td>
                                     <td class="remove-pr">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
+                                        <button type="button" onclick="removeCartItem('aloeVera')" class="button" aria-label="Remove Product 3">
                                             Remove
                                         </button>
                                     </td>
@@ -247,17 +253,16 @@
                                         <p>R 400</p>
                                     </td>
                                     <td class="quantity-box">
-                                        <input onchange="handleInputOnChange('rubberPlant')" id="rubberPlant-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                        <label for="rubberPlant-input"></label><input onchange="handleInputOnChange('rubberPlant')" id="rubberPlant-input" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
                                     <td class="total-pr" id="rubberPlant-pr">
                                         <p>R </p>
                                     </td>
                                     <td class="remove-pr">
-                                        <button type="button" class="btn btn-danger" aria-label="Remove Product 3">
+                                        <button type="button"  onclick="removeCartItem('rubberPlant')" class="button" aria-label="Remove Product 3">
                                             Remove
                                         </button>
                                     </td>
                                 </tr>
-
                             </tbody>
                         </table>
                     </div>
@@ -267,29 +272,22 @@
 <!--            Update cart-->
                 <div class="col-lg-6 col-sm-6">
                     <div class="update-box">
-                        <input value="Update Cart" type="submit">
                     </div>
                 </div>
             </div>
 
-            <div class="row my-5">
+            <div class="row my-5 ">
                 <div class="col-lg-8 col-sm-12"></div>
-                <div class="col-lg-4 col-sm-12">
-                    <div class="order-box">
-                        <h3>Order summary</h3>
-                        <div class="d-flex">
+                <div  id="grand-t" class="col-lg-4 col-sm-12 text-center">
                         <hr>
                         <div class="d-flex gr-total">
                             <h5>Grand Total (Tax Inc.):</h5>
-                            <div class="ml-auto h5" id="total"> R </div>
+                            <div class="ml-auto pr-5 h5" id="total"> R </div>
                         </div>
-                        <hr> </div>
+                        <hr>
                 </div>
-                <div class="col-12 d-flex shopping-box"><a href="" class="ml-auto btn hvr-hover">Checkout</a> </div>
+                </div>
             </div>
-
-        </div>
-    </div>
     <!-- End Cart -->
 
 
@@ -298,9 +296,8 @@
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. <a href="#">&copy; Botanic Bliss2023</a> <br>Design By :
+        <p class="footer-company">All Rights Reserved.  <br>Design By :
             <br>Janine & Shasha</p>
-
     </div>
     <!-- End copyright  -->
 

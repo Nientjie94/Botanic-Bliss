@@ -33,7 +33,6 @@ hideEmptyItems()
 
 updateInputItems()
 
-
 qTotal()
 
 calculateTotal()
@@ -66,6 +65,16 @@ function hideEmptyItems() {
     )
 }
 
+// Remove items
+const removeCartItem = (key) => {
+    cartItems[key].quantity = 0
+    hideEmptyItems()
+    updateCartCounter()
+    saveCartToLS()
+    calculateTotal()
+    console.log(key)
+}
+
 function updateCartCounter() {
     console.log('running');
     let total = 0
@@ -88,13 +97,13 @@ function updateInputItems() {
 }
 
 // Calculate the grandTotal for each object based on price and quantity
-function qTotal()  {
+function qTotal() {
     Object.keys(cartItems).forEach(
         (key) => {
             console.log(key)
 
-            if(cartItems[key]) {
-               const itemTotal =  (cartItems[key].quantity * cartItems[key].price)
+            if (cartItems[key]) {
+                const itemTotal = (cartItems[key].quantity * cartItems[key].price)
                 const ele = document.getElementById(key + '-pr')
                 ele.innerText = 'R ' + itemTotal
             }
@@ -120,16 +129,15 @@ function calculateTotal() {
         (key) => {
             console.log(key)
 
-            if(cartItems[key]) {
+            if (cartItems[key]) {
                 grandTotal = grandTotal + (cartItems[key].quantity * cartItems[key].price)
             }
 
             const el = document.getElementById('total')
             el.innerText = 'R ' + grandTotal
 
-        console.log(grandTotal)
+            console.log(grandTotal)
         }
-
     )
 }
 
