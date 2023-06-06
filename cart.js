@@ -22,12 +22,6 @@ let cartItems = { // object to store cart items
     },
 }
 
-/* todo add ids on rows html
-    todo update html inputs to reflect ls
-
-
-*
-* */
 
 console.log(cartItems)
 
@@ -38,6 +32,7 @@ updateCartCounter()
 hideEmptyItems()
 
 updateInputItems()
+
 
 qTotal()
 
@@ -63,9 +58,9 @@ function hideEmptyItems() {
                 if (cartItems[key].quantity === 0) {
                     cartItem.setAttribute('style', 'display: none')
                     console.log(key, 'is empty', cartItem)
+                } else if (cartItems[key].quantity > 0) {
+                    cartItem.setAttribute('style', 'display: table-row')
                 }
-            } else if (cartItems[key].quantity > 0) {
-                cartItem.setAttribute('style', 'display: initial')
             }
         }
     )
