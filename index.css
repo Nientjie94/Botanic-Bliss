@@ -81,11 +81,11 @@ body {
 #hero .icon-box .title {
     font-weight: 700;
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 18px;;
 }
 
 #hero .icon-box .title a {
-    color: #124265;
+    color: darkslategray;
     transition: 0.3s;
 }
 
@@ -102,7 +102,7 @@ body {
     transition: all 0.3s ease-in-out;
     font-size: 36px;
     line-height: 1;
-    color: #2487ce;
+    color: #1b5120;
 }
 
 #hero .icon-box:hover {
@@ -110,7 +110,7 @@ body {
 }
 
 #hero .icon-box:hover .title a {
-    color: #2487ce;
+    color: #1b5120;
 }
 
 @media (min-width: 1024px) {
@@ -290,7 +290,7 @@ p {
     border-block-style: groove;
     text-decoration: none;
 
-    text-decoration-color: #1b5120
+    text-decoration-color: #1b5120;
     border: none;
     transition: color 0.3s; /* Add transition effect for hover */
 }
@@ -299,9 +299,3 @@ p {
     background-color: darkslategray; /* Set dark green background color on hover */
     color: #fff; /* Set text color to white on hover */
 }
-}
-
-.why-us {
-    background-image: url("pexels-maksim-goncharenok-4596808.jpg");
-}
-
